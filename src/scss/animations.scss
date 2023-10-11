@@ -1,0 +1,74 @@
+.main-title {
+  position: relative;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 1px;
+  //display: inline-block;
+  max-width: 388px;
+  //color: $bg-color;
+  //background-color: $white;
+}
+
+.write-animation {
+  animation: write-animation 4s steps(44) .8s 1 normal both,
+  cursor-animation 1s steps(44) 8 normal forwards;
+}
+
+@keyframes write-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 103%;
+    /*TODO*/
+    //width: 380px;
+    //@media (max-width: $mobile-sm) {
+    //  width: 100px;
+    //}
+  }
+}
+
+@keyframes cursor-animation {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.fade-animation {
+  animation: fade-animation 2s 1 forwards;
+  animation-delay: 3.8s;
+}
+@keyframes fade-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.levitation {
+  animation: levitation 2s infinite ease-in-out;
+}
+@keyframes levitation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.intro__btn.fade-animation {
+  animation-delay: 4s;
+}
+
+.animation {
+  opacity: 0;
+}

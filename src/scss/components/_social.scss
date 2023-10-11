@@ -1,0 +1,51 @@
+.m-socials {
+  @extend .flex;
+  @extend .align-center;
+}
+.m-socials__link {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-flex;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.m-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-color: currentColor;
+
+  -webkit-mask-size:contain;
+  -webkit-mask-position:center;
+  -webkit-mask-repeat:no-repeat;
+  mask-size:contain;
+  mask-position:center;
+  mask-repeat:no-repeat;
+  display: inline-block;
+  transition: .3s ease-in-out;
+}
+.m-icon-vk {
+  @extend .m-icon;
+  mask-image: url(../img/icons/vk-120-tr.svg);
+  &:hover {
+    mask-image: url(../img/icons/vk-120-filled.svg);
+  }
+}
+.m-icon-tl {
+  @extend .m-icon;
+  mask-image: url(../img/icons/icons8-telegram-app.svg);
+  &:hover {
+    mask-image: url(../img/icons/icons8-telegram-app-filled.svg);
+  }
+}
+.m-icon-mail {
+  @extend .m-icon;
+  mask-image: url(../img/icons/icons8-gmail-logo.svg);
+  &:hover {
+    mask-image: url(../img/icons/icons8-gmail-logo-filled.svg);;
+  }
+}

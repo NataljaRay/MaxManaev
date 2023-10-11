@@ -1,0 +1,51 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 30px;
+  justify-content: flex-end;
+  @extend .w-100;
+  line-height: 1;
+  z-index: 1;
+
+  @media(min-width: $tablet-sm) and (orientation: portrait) {
+
+  }
+  @media(min-width: $mobile-sm) and (orientation: landscape) {
+    //margin: auto;
+  }
+  @media(min-width: $tablet) {
+    margin: 0 auto 22px;
+  }
+}
+.intro__title {
+  font-size: 120px;
+  p {
+    margin-bottom: 0;
+    font-weight: 100;
+  }
+}
+.intro__subtitle {
+  @extend .flex;
+  font-size: 84px;
+  h1 {
+    font-weight: 100;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+.intro__description {
+  font-size: 28px;
+  h2 {
+    font-weight: 400;
+  }
+}
+.intro__thanks {
+  font-size: 80px;
+  max-width: 70%;
+}
+
+.intro__btn {
+  overflow: hidden;
+  margin: 20px auto 0;
+}

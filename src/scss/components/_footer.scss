@@ -1,0 +1,51 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+}
+.footer-inner {
+  height: 100%;
+  transition: all .3s ease-in-out;
+  display: flex;
+  align-items: center;
+
+  &:before,
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity .2s;
+  }
+
+  &:before {
+    background: linear-gradient(0deg, $bg-color 0, hsla(0, 0%, 100%, 0));
+  }
+
+  &:after {
+    backdrop-filter: blur(1px);
+    height: 80%;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  .c-icon {
+    width: 40px;
+    height: 60px;
+  }
+}
+
+.f-text {
+  margin: 0;
+  opacity: .6;
+}
+.f-text--light {
+  opacity: .4;
+  font-weight: 100;
+  font-size: 12px;
+}
