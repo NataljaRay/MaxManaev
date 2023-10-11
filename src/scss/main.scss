@@ -507,8 +507,8 @@
     //background-position-y: -15vh;
     background-position-y: 0;
   }
-  .intro__title {font-size: 8vw}
-  .intro__subtitle {font-size: 6vw}
+  .intro__title {font-size: 6vw}
+  .intro__subtitle {font-size: 4vw}
   .m-card {
     height: 20vw;
   }
@@ -549,8 +549,14 @@
   }
 }
 @media (max-width: $tablet - 1) and (max-height: 500px) {
+  .intro__description {
+    font-size: 20px;
+  }
+  .main-title {
+    max-width: 280px;
+  }
   .section--main .container {
-    min-height: 100vh;
+    //min-height: 100vh;
   }
   .section--about {
     padding-top: 80px;
@@ -627,6 +633,8 @@
 }
 
 @media (max-width: $mobile-sm) {
+  .intro__title {font-size: 8vw}
+  .intro__subtitle {font-size: 6vw}
   .main-title {
     max-width: 200px;
   }
@@ -661,7 +669,7 @@
     margin-bottom: 20px;
   }
   .section--main .container {
-    min-height: 100vh;
+    //min-height: 100vh;
   }
   .section--about {
     padding-top: 60px;
