@@ -72,9 +72,9 @@ $(document).ready(function () {
         });
     };
 
-    // const observer = new IntersectionObserver( trueCallback, options );
-    // observer.observe( sliderMusic );
-    // observer.observe( sliderRetouch );
+    const observer = new IntersectionObserver( trueCallback, options );
+    observer.observe( sliderMusic );
+    observer.observe( sliderRetouch );
 
 
 });
