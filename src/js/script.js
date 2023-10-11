@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log('hello world'); // test
+    // console.log('hello world'); // test
 
     $('.m-slider').slick({
         dots: true,
