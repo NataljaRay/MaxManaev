@@ -6,7 +6,9 @@
 .slick-track {
   height: 100%;
 }
-
+.slick-track {
+   will-change: transform;
+}
 .slick-slider img {
   max-height: 100%;
   &:hover {

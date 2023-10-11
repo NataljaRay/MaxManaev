@@ -12,6 +12,16 @@
 @import "components/slider-customization";
 @import "animations"; //?????
 
+/* CLS fix */
+.container--full {
+  min-height: 412px;
+}
+
+
+
+
+
+
 .section {
   padding: 180px 0 60px 0;
 }

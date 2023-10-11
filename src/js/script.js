@@ -43,8 +43,8 @@ $(document).ready(function () {
      * visibility observer for sliders
      * **/
 
-    var autoplay = false;
-    const sliders = document.querySelectorAll('.s-observe');
+    const sliderMusic = document.querySelector('#sliderMusic');
+    const sliderRetouch = document.querySelector('#sliderRetouch');
 
     const options = {
         rootMargin: '0px',
@@ -53,54 +53,29 @@ $(document).ready(function () {
 
     const trueCallback = function(entries, observer) {
         entries.forEach((entry) => {
-            autoplay = !autoplay;
-            changeAutoplay(entry.target.id);
+            // получаем свойства, которые доступны в объекте entry
+            const { target, isIntersecting } = entry;
+            const
+                sliderId = target.id,
+                autoplay = isIntersecting;
+
+            // console.log(sliderId, autoplay)
+            if( autoplay ) {
+                // добавляем класс, когда элемент входит в область наблюдения
+                $('#'+ sliderId).slick('slickPlay');
+                // console.log(sliderId, 'slickPlay')
+            } else {
+                // удаляем класс, когда элемент из неё выходит
+                $('#'+ sliderId).slick('slickPause');
+                // console.log(sliderId, 'slickPause')
+            }
         });
     };
 
-    const changeAutoplay = function(sliderId) {
-        if (autoplay) {
-            $('#'+ sliderId).slick('slickPlay');
-            console.log()
-        } else {
-            $('#'+ sliderId).slick('slickPause');
-        }
-    };
+    // const observer = new IntersectionObserver( trueCallback, options );
+    // observer.observe( sliderMusic );
+    // observer.observe( sliderRetouch );
 
-    const observer = new IntersectionObserver( trueCallback, options );
-    sliders.forEach((customSlider) => {
-        observer.observe( customSlider );
-    });
-
-    changeAutoplay();
-
-
-    // /**
-    //  * visibility observer for topBth
-    //  * **/
-    // var visible = false;
-    // const firstScreen = document.querySelector('.section--main .intro');
-    // const toTopBtn = document.querySelector('.to-top');
-    //
-    // const observerTopBtnCallback = function(entries, observer) {
-    //     entries.forEach((entry) => {
-    //         console.log('top');
-    //         visible = !visible;
-    //         changeVisibility();
-    //     });
-    // };
-    //
-    // const changeVisibility = function() {
-    //     if (visible) {
-    //         toTopBtn.classList.remove('active');
-    //     } else {
-    //         toTopBtn.classList.add('active');
-    //     }
-    // };
-    //
-    // const observerTopBtn = new IntersectionObserver( observerTopBtnCallback, options );
-    // observerTopBtn.observe( firstScreen );
-    // changeVisibility();
 
 });
 const body = document.querySelector('body');
