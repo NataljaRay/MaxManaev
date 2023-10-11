@@ -45,7 +45,13 @@
   opacity: .6;
 }
 .f-text--light {
-  opacity: .4;
   font-weight: 100;
   font-size: 12px;
+  a {
+    transition: opacity $time ease;
+    opacity: .4;
+    &:hover {
+      opacity: .6;
+    }
+  }
 }
