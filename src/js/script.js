@@ -79,11 +79,17 @@ $(document).ready(function () {
 
 });
 const body = document.querySelector('body');
+const mainSection = document.querySelector('.section--main');
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // код для мобильных устройств
     body.classList.add('mobile')
 } else {
     // код для обычных устройств
+}
+if (/iPhone/i.test(navigator.userAgent)) {
+    body.classList.add('iPhone');
+    mainSection.classList.remove('parallax__section');
+    mainSection.classList.add('section--img-back');
 }
 
 

@@ -100,6 +100,16 @@
   }
 }
 
+/* no parallax for Iphone */
+.iPhone {
+  .section--main {
+    &:before {
+      background: url(../img/main-1.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
 
 /* about */
 .section--about {
