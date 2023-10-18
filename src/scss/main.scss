@@ -747,3 +747,8 @@
   }
 
 }
+@media (max-width: $mobile-sm) and (max-height: 500px) {
+  .section--contact:before {
+    background-position-y: 0;
+  }
+}
